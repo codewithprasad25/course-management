@@ -1,4 +1,4 @@
-package com.example.course_management.Models;
+package com.example.course_management.models;
 
 public class Student {
     int id;
@@ -12,6 +12,9 @@ public class Student {
         this.name = name;
         this.password = password;
         this.email = email;
+    }
+
+    public Student() {
     }
 
     public int getId() {
