@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Course Management System</h1>
+    <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+</header>
+
+<div class="container">
+
+    <section class="card" id="authSection">
+
+        <div class="auth-buttons">
+            <button onclick="showRegister()">Register</button>
+            <button onclick="showLogin()">Login</button>
+        </div>
+
+        <div id="registerForm" style="display:none;">
+            <h2>Student Registration</h2>
+            <input type="text" id="regName" placeholder="Student Name">
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPassword" placeholder="Password">
+            <button id="register">Register</button>
+        </div>
+
+        <div id="loginForm" style="display:none;">
+            <h2>Student Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button id="login">Login</button>
+        </div>
+
+    </section>
+
+
+    <div id="courseSection" style="display:none;">
+
+        <section class="card">
+            <h2>Search</h2>
+            <div class="controls">
+                <input type="text" id="searchBox" placeholder="Search course">
+                <button onclick="loadCourses()">Search</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Available Courses</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Instructor</th>
+                    <th>Duration</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="courseTable"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>My Enrollments</h2>
+            <ul id="enrolledList"></ul>
+        </section>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
