@@ -19,4 +19,13 @@ public class StudentRepo {
         }
         return null;
     }
+
+    public Student findByEmail(String email){
+        for(Student student : studentDb.values()){
+           if(student.getEmail().equals(email)){
+
+           }return student;
+        }
+        return null;
+    }
 }
