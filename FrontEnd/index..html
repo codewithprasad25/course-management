@@ -14,6 +14,7 @@
 
 <div class="container">
 
+    <!-- AUTH SECTION -->
     <section class="card" id="authSection">
 
         <div class="auth-buttons">
@@ -38,17 +39,18 @@
 
     </section>
 
-
+    <!-- COURSE SECTION -->
     <div id="courseSection" style="display:none;">
 
+        <!-- SEARCH -->
         <section class="card">
             <h2>Search</h2>
             <div class="controls">
-                <input type="text" id="searchBox" placeholder="Search course">
-                <button onclick="loadCourses()">Search</button>
+                <input type="text" id="searchInput" placeholder="Search course" onkeyup="searchCourse()">
             </div>
         </section>
 
+        <!-- COURSES -->
         <section class="card">
             <h2>Available Courses</h2>
             <table>
