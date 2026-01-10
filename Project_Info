@@ -1,0 +1,125 @@
+# 📚 Course Management System
+
+A backend-driven **Course Management System** built using **Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL**.  
+This project follows clean layered architecture and demonstrates real-world backend development practices.
+
+---
+
+## 🚀 Features
+
+- Student Registration
+- Student Login
+- Course Management
+- Student Enrollment into Courses
+- Backend-driven validations
+- Automatic table creation using Hibernate
+- RESTful APIs
+- PostgreSQL database integration
+
+---
+
+## 🛠️ Tech Stack
+
+- Java
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- PostgreSQL
+- Maven
+- REST APIs
+- Postman
+
+---
+
+## 🧱 Project Architecture
+
+Controller → Service → Repository → Database
+↓
+DTOs
+
+
+---
+
+## 📂 Package Structure
+
+Client (Postman / UI)
+↓
+Controller
+↓
+Service (Business Logic)
+↓
+Repository (Spring Data JPA)
+↓
+Hibernate
+↓
+JDBC
+↓
+PostgreSQL
+
+
+---
+
+## 🔐 Design Decisions
+
+- Email is unique for each student
+- DTOs are used to decouple API and database layers
+- Repository interfaces extend JpaRepository
+- Hibernate schema generation using ddl-auto=update
+
+---
+
+
+Test APIs using Postman
+
+▶️ How to Run the Project
+
+Clone the repository
+
+Create database in PostgreSQL:
+
+CREATE DATABASE course_management;
+
+
+Update database credentials in application.properties
+
+Run the application:
+
+mvn spring-boot:run
+
+
+Test APIs using Postman
+
+🧪 Sample API Endpoints
+Register Student
+POST /students/register
+
+Login Student
+POST /students/login
+
+Enroll Student
+POST /enrollment/create
+
+
+Request Body:
+
+{
+  "studentEmail": "abc@gmail.com",
+  "courseId": 1
+}
+
+## ⚙️ Configuration
+
+### application.properties
+
+```properties
+spring.application.name=course-management
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/course_management
+spring.datasource.username=postgres
+spring.datasource.password=YOUR_PASSWORD
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+
